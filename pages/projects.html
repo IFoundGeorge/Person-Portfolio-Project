@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/project.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Header, Body, and Footer Example</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Projects</h1>
+
+        <p>
+            Below are the projects I have worked on so far, showcasing my skills, creativity, and continuous growth as a developer.
+        </p>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="skills.html">Skills & Technologies</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+        <h2>Projects</h2>
+        <p>Here are some of the projects I’ve worked on so far as part of my learning and development.</p>
+
+
+        <div class="card show">
+            <h3>RandFourBoost</h3>
+
+            <p><b>What problem it Solves</b></p>
+
+            <p>
+                RandFourBoost addresses a common challenge faced by beginner music producers:
+                identifying whether their music aligns with the intended genre. Beginners often
+                struggle to recognize genre-specific characteristics, which can result in tracks
+                that drift away from the genre they aim to create. This system helps provide
+                guidance by predicting the genre of a track, allowing producers to evaluate
+                whether their music is on the right track.
+            </p>
+
+            <p><b>Technologies Used</b></p>
+
+            <p>
+                The system was developed using Python, with machine learning models implemented
+                through the scikit-learn library. The application is planned to be deployed using
+                Flask as a backend framework, allowing the model to be accessed through a web-based
+                interface for user interaction.
+            </p>
+
+            <p>
+                GitHub link:
+            <a href="https://github.com/IFoundGeorge/RandFourBoost" target="_blank" rel="noopener noreferrer">
+                https://github.com/IFoundGeorge/RandFourBoost
+            </a>
+        </p>
+
+            </div>
+        </div>
+
+        
+
+        <h2>Demo</h2>
+
+            <p>
+                We called our System Gentective, Where it Predicts Music/Tracks Genres
+            </p>
+
+        <div class="card show">
+
+            <div class="demo">
+
+                <!-- Hidden file input -->
+                <input type="file" id="audioUpload" accept="audio/*" hidden>
+
+                <!-- Custom upload UI -->
+                <label for="audioUpload" class="upload-box">
+                    <span class="upload-text">Drop a music file here or click to upload</span>
+                    <span class="file-name">No file selected</span>
+                </label>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <button class="predict-btn" disabled>Predict</button>
+
+                <p class="result">
+                    Predicted Genre: <span>—</span>
+                </p>
+            </div>
+
+        </div>
+        
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="card show">
+            <h3>A Web-Based System for Agricultural Data Monitoring, Yield Estimation, and Reporting</h3>
+
+            <p><b>What Problem It Solves</b></p>
+
+            <p>
+                This system addresses the challenge of managing and analyzing agricultural data efficiently.
+                In many cases, farmer records, farm sizes, and crop yield information are stored manually or
+                across multiple sources, making it difficult to monitor production and generate accurate
+                reports. This system centralizes agricultural data, allowing administrators to easily track
+                farmers, monitor farm sizes, estimate crop yields, and view production statistics to support
+                better planning and decision-making.
+            </p>
+
+            <p><b>Technologies Used</b></p>
+
+            <p>
+                The system was developed using web technologies such as HTML, CSS, and JavaScript for the
+                frontend interface, with Bootstrap used for responsive design. Data visualization is handled
+                using Chart.js to display production statistics and trends. The system connects to a backend
+                through a REST API, with data processing and management handled by a server built using
+                Node.js and Express.
+            </p>
+
+
+            <p>
+                GitHub link:
+                <a href="https://github.com/IFoundGeorge/Smart-Seed-v8-master" target="_blank" rel="noopener noreferrer">
+                    https://github.com/IFoundGeorge/Smart-Seed-v8-master
+                </a>
+            </p>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <div class="card show">
+            <h3>Lyrics to Powerpoint</h3>
+
+            <p><b>What Problem It Solves</b></p>
+
+            <p>
+                Lyrics to PowerPoint is a tool I created to make it easier to generate presentation slides
+                for our church during praise and worship lineups. Previously, creating these slides required
+                manually copying and pasting each line of lyrics into PowerPoint, which was time-consuming
+                and repetitive. This project streamlines the process by automatically organizing lyrics into
+                slides, allowing presentations to be created faster and more efficiently.
+            </p>
+
+            <p><b>Technologies Used</b></p>
+
+            <p>
+                The system was developed using Python, which was used to handle the core logic and functionality
+                of the project. Python was chosen for its simplicity and efficiency, making it suitable for
+                processing data and automating tasks within the application.
+            </p>
+
+            <p>
+                GitHub link:
+            <a href="https://github.com/IFoundGeorge/Lyrics-To-Powerpoint" target="_blank" rel="noopener noreferrer">
+                https://github.com/IFoundGeorge/Lyrics-To-Powerpoint
+            </a>
+        </p>
+
+            </div>
+        </div>
+
+        <h2>Demo</h2>
+
+            <p>
+                Lyrics to Powerpoint Demonstration
+            </p> 
+
+        <div class="lyrics-demo">
+            <h3>Lyrics to PowerPoint (Preview)</h3>
+
+            <textarea
+                id="lyricsInput"
+                placeholder="Enter lyrics here. Leave a blank line to create a new slide."
+            ></textarea>
+
+            <button onclick="generateSlides()">Generate Preview</button>
+
+            <div id="cardsContainer"></div>
+        </div>
+
+        <br><br>
+        
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <br>
+        <p>&copy; 2026 My Website. All rights reserved.</p>
+        <p>
+            Contact:
+                <a href="https://github.com/IFoundGeorge" target="_blank">GitHub</a> |
+                <a href="https://ph.linkedin.com/in/cyrus-cavero-873992159/en" target="_blank">LinkedIn</a> |
+                <a href="mailto:caverocyrus@gmail.com">Gmail</a>
+        </p>
+        </p>
+        <br>
+    </footer>
+
+    <script src="../js/randfourboost-demo.js"></script>
+    <script src="../js/lyrics2powerpoint.js"></script>
+</body>
+</html>

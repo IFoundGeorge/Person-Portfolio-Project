@@ -1,0 +1,163 @@
+html {
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
+
+page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+    color: black;
+    animation: body-color 9s infinite linear;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in forwards;
+}
+
+@keyframes color {
+  0%   { background: #afb3bb; }
+  20%  { background: #9f9f9f; }
+  40%  { background: #696969; }
+  60%  { background: #5b5b5b; }
+  80%  { background: #6f6f6f; }
+  100% { background: #746d6d; }
+}
+
+@keyframes body-color {
+  0%   { background: #ffffff; }
+  20%  { background: #ffffff; }
+  40%  { background: #f6fff6; }
+  60%  { background: #f6f8ff; }
+  80%  { background: #ffffff; }
+  100% { background: #ffffff; }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+header{
+    position: static;
+    top: 0;
+    padding: 10px 16px;
+    background: #555;
+    font-size: 25px;
+    color: aliceblue;
+    text-align: center;
+    animation: color 9s infinite linear;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+nav{
+    position: relative;
+}
+
+/* Remove default list styling */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Align list items horizontally */
+li {
+    position: sticky;
+    float: left;
+}
+
+/* Style the links */
+li a {
+    position: sticky;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 20px;
+}
+
+/* Add hover effect */
+li a:hover {
+background-color: #111;
+}
+
+main {
+    position: relative;   /* or remove position entirely */
+    text-align: center;
+}
+
+main h2 {
+    font-size: 60px;
+}
+
+img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 20px;
+    border: 2px solid #ddd;
+}
+
+/* Card Container */
+main .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card styles */
+main .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 1500px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+
+main .card h3 {
+  font-size: 50px;
+}
+
+
+main .card p {
+  font-size: 44px;
+  line-height: 1.5;
+  margin: 30px;
+}
+
+main p {
+  font-size: 34px;
+  line-height: 1.5;
+  margin: 30px;
+}
+
+main .background {
+  background-color: #cfe4ff;
+}
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(80, 80, 80);
+  color: white;
+  text-align: center;
+}
