@@ -1,272 +1,188 @@
-html {
-   margin: 0px;
-   height: 100%;
-   width: 100%;
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-page-container {
-  position: relative;
-  min-height: 100vh;
+/* ===== Body ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  animation: body-color 9s infinite linear;
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
-content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
-}
-
-body{
-    background-color: rgb(255, 255, 255);
-    font-family: Arial, sans-serif;
-    color: black;
-    animation: body-color 9s infinite linear;
-}
-
-@keyframes color {
-  0%   { background: #afb3bb; }
-  20%  { background: #9f9f9f; }
-  40%  { background: #696969; }
-  60%  { background: #5b5b5b; }
-  80%  { background: #6f6f6f; }
-  100% { background: #746d6d; }
-}
-
-@keyframes body-color {
-  0%   { background: #ffffff; }
-  20%  { background: #ffffff; }
-  40%  { background: #f6fff6; }
-  60%  { background: #f6f8ff; }
-  80%  { background: #ffffff; }
-  100% { background: #ffffff; }
-}
-
-/* Keyframes for fade-in + slight upward motion */
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-header{
-    position: static;
-    top: 0;
-    padding: 10px 16px;
-    background: #555;
-    font-size: 25px;
-    color: aliceblue;
-    text-align: center;
-    animation: color 9s infinite linear;
-    text-shadow: 2px 2px 5px rgb(0, 0, 0);
-}
-
-nav{
-    position: relative;
-}
-
-/* Remove default list styling */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-/* Align list items horizontally */
-li {
-    position: sticky;
-    float: left;
-}
-
-/* Style the links */
-li a {
-    position: sticky;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    font-size: 20px;
-}
-
-/* Add hover effect */
-li a:hover {
-background-color: #111;
-}
-
-main {
-    position: relative;   /* or remove position entirely */
-    text-align: center;
-}
-
-main h2 {
-    font-size: 60px;
-}
-
-img {
-    max-width: 30%;
-    height: auto;
-    border-radius: 20px;
-    border: 2px solid #ddd;
-}
-
-/* Card Container */
-main .card-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-/* Card styles */
-main .card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 10px;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.2s;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-    /* Fade-in animation */
+@keyframes fadeIn {
+  from {
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out forwards;
-    
-}
-
-main .card img {
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-main .card h3 {
-  font-size: 50px;
-}
-
-
-main .card p {
-  font-size: 35px;
-  line-height: 1.5;
-  margin: 30px;
-}
-
-main p {
-  font-size: 44px;
-  line-height: 1.5;
-  margin: 30px;
-}
-
-main .background {
-  background-color: #cfe4ff;
-}
-
-main .upload-box {
-    border: 2px dashed #ccc;
-    border-radius: 10px;
-    padding: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: block;
-    margin: 20px auto;
-    max-width: 1200px;
-}
-
-main .upload-box:hover {
-    border-color: #555;
-    background-color: #f9f9f9;
-}
-
-main .upload-text {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
-main .file-name {
-    font-size: 14px;
-    color: #666;
-}
-
-main .predict-btn {
-    margin-top: 15px;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: not-allowed;
-    opacity: 0.6;
-    transition: all 0.3s ease;
-}
-
-main .predict-btn:enabled {
-    cursor: pointer;
+    transform: translateY(10px);
+  }
+  to {
     opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-main .predict-btn:hover:enabled {
-    transform: translateY(-2px);
+/* ===== Header ===== */
+header {
+  padding: 20px 15px;
+  background: #555;
+  color: aliceblue;
+  text-align: center;
+  text-shadow: 2px 2px 5px black;
 }
 
-main .result span {
-    transition: color 0.3s ease;
+header h1 {
+  font-size: 32px;
 }
 
-main .result span.success {
-    color: #28a745; /* nice clean green */
-    font-weight: bold;
-}
-
-
-main .demo {
-    margin: 20px 0;
-    border-radius: 10px; /* optional, looks nicer */
-    padding: 20px;       /* optional, gives breathing room */
-}
-
-main .demo input {
-    margin: 10px 0;
-}
-
-main .predict-btn {
-    padding: 30px 50px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-main .result {
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-.lyrics-demo textarea {
-  width: 50%;
-  height: 160px;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.lyrics-demo button {
-  width: 50%;
-  padding: 10px 16px;
-  margin: 10px 0 20px;
-  cursor: pointer;
+header p {
   font-size: 16px;
 }
 
+/* ===== Navigation ===== */
+nav {
+  background-color: #333;
+}
 
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav a:hover {
+  background-color: #111;
+}
+
+/* ===== Main ===== */
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+main p {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 15px auto;
+}
+
+button {
+  margin: 20px auto;
+  display: block;
+
+  padding: 14px 36px;
+  font-size: 18px;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: #fff;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ===== Card ===== */
+.card {
+  background-color: #fff;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 20px;
+}
+
+/* Card image ONLY */
+.card img {
+  width: 220px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 20px;
+  border: 2px solid #ddd;
+}
+
+/* Card text */
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px auto;
+}
+
+/* ===== Upload / Demo Sections ===== */
+#lyricsInput {
+  width: 60%;
+  min-height: 180px;
+  padding: 16px 18px;
+
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  outline: none;
+
+  resize: vertical;
+  background-color: #ffffff;
+  color: #333;
+
+  transition: 
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+/* Focus effect */
+#lyricsInput:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Placeholder style */
+#lyricsInput::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* ===== Lyrics Cards ===== */
 #cardsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -276,25 +192,19 @@ main .result {
 .lyric-card {
   background: #000;
   color: #fff;
-  padding: 30px 20px;
+  padding: 20px;
   border-radius: 10px;
-  text-align: center;
-  font-size: 22px;
-  min-height: 180px;
-
+  font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  white-space: pre-line;
 }
 
-
+/* ===== Footer ===== */
 footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(80, 80, 80);
+  background-color: #505050;
   color: white;
   text-align: center;
+  padding: 20px;
+  font-size: 14px;
 }
