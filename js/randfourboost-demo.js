@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     predictBtn.addEventListener("click", () => {
-    resultText.textContent = "Genre Predicted";
-    resultText.classList.add("success");
+        resultText.textContent = "Genre Predicted";
+        resultText.classList.add("success");
     });
 
 });

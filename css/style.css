@@ -1,183 +1,569 @@
-/* Reset & Base */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ================== IMPORT FONTS ================== */
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('fonts/Minecraftia.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
+/* ================== GLOBAL ================== */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  color: #222;
-  animation: fadeIn 1s ease-in forwards;
-  opacity: 0;
+    background: #c0c0c0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    color: #000;
 }
 
-/* Fade In */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+a {
+    color: #003399;
+    text-decoration: none;
 }
 
-/* Header */
-header {
-  padding: 30px 20px;
-  background: linear-gradient(135deg, #555, #777);
-  color: rgb(255, 255, 255);
-  text-align: center;
-  text-shadow: 2px 2px 5px black;
+a:hover {
+    text-decoration: underline;
 }
 
-header h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
+hr {
+    border: 0;
+    border-top: 1px solid #999;
+    margin: 15px 0;
 }
 
-header p {
-  font-size: 16px;
+/* ================== HEADINGS ================== */
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Minecraftia', 'Press Start 2P', monospace;
+    color: #1E90FF;
+    /* Minecraft-style blue */
+    text-shadow: 1px 1px #000, 2px 2px #555;
+    margin: 0 0 6px 0;
 }
 
-/* Navigation */
-nav {
-  background-color: #333;
+h1 {
+    font-size: 20px;
+    font-weight: normal;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
+h2 {
+    font-size: 16px;
+    font-weight: normal;
 }
 
-nav li a {
-  display: block;
-  padding: 14px 20px;
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
+h3 {
+    font-size: 14px;
+    font-weight: normal;
 }
 
-nav li a:hover {
-  background-color: #111;
+h4 {
+    font-size: 12px;
+    font-weight: normal;
 }
 
-/* Main Content */
-main {
-  padding: 50px 20px;
-  text-align: center;
+/* ================== BODY TEXT ================== */
+p,
+li,
+a,
+button,
+.profile-text p,
+.card p,
+.cert-info {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
+/* ================== PAGE WRAPPER ================== */
+.page-wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 15px auto;
+    background: #dcdcdc;
+    border: 2px solid #000;
+    box-shadow: 2px 2px 0 #999;
+    padding: 10px;
 }
 
-main h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
+/* ================== HEADER BANNER ================== */
+.banner {
+    background: linear-gradient(#003366, #336699);
+    color: #fff;
+    padding: 12px;
+    border-bottom: 2px solid #000;
+    text-align: center;
+    box-shadow: 2px 2px 0 #666;
 }
 
-main p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: #444;
+.banner h1 {
+    margin: 0;
+    font-size: 20px;
 }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 160px;
-  height: auto;
-
-  border-radius: 20px;
-  border: 3px solid #ddd;
+.banner p {
+    margin: 4px 0 0;
+    font-size: 11px;
 }
 
+/* ================== MAIN LAYOUT ================== */
+.layout {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 2px solid #000;
+    gap: 10px;
+}
 
-/* Card */
+/* ================== SIDEBAR ================== */
+.sidebar {
+    flex: 0 0 180px;
+    background: #b0b0b0;
+    border: 2px solid #000;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.sidebar h3 {
+    font-family: 'Minecraftia', 'Press Start 2P', monospace;
+    font-size: 12px;
+    margin: 0 0 6px 0;
+    padding: 4px;
+    background: #dcdcdc;
+    border: 2px solid #000;
+    text-shadow: 1px 1px #555;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin: 4px 0;
+}
+
+/* ================== CONTENT AREA ================== */
+.content {
+    flex: 1;
+    padding: 12px;
+    background: #dcdcdc;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 0 #999;
+}
+
+.content h2,
+.content h3 {
+    font-family: 'Minecraftia', 'Press Start 2P', monospace;
+    padding: 4px;
+    border: 2px solid #000;
+    background: #f0f0f0;
+    text-shadow: 1px 1px #555;
+}
+
+/* ================== PROFILE BOX ================== */
+.profile-box {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    background: #b0b0b0;
+    padding: 8px;
+    margin-top: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    box-shadow: 2px 2px 0 #999;
+}
+
+.profile-box img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 2px solid #000;
+    background: #fff;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.profile-text h3,
+.profile-text h4 {
+    font-family: 'Minecraftia', 'Press Start 2P', monospace;
+    margin: 0 0 4px 0;
+    font-size: 13px;
+}
+
+.profile-text p {
+    margin: 4px 0;
+    line-height: 1.4;
+}
+
+/* Profile sections & backgrounds */
+.profile-section,
+.bg-section {
+    margin-bottom: 12px;
+    padding: 6px;
+    border: 2px solid #000;
+    background: #dcdcdc;
+    box-shadow: 2px 2px 0 #999;
+}
+
+.profile-section h4,
+.bg-section h4 {
+    font-family: 'Minecraftia', 'Press Start 2P', monospace;
+    color: #1E90FF;
+    text-shadow: 1px 1px #000;
+    margin: 0 0 4px 0;
+}
+
+.profile-section p,
+.profile-section ul,
+.bg-section p,
+.bg-section ul {
+    margin: 0;
+    padding-left: 16px;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.profile-section ul li,
+.bg-section ul li {
+    margin-bottom: 4px;
+}
+
+.background-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+/* ================== CERTIFICATIONS ================== */
+.cert-box {
+    border: 2px solid #000;
+    background: #b0b0b0;
+    padding: 8px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 0 #999;
+}
+
+.cert-item {
+    border-bottom: 1px dotted #000;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.cert-item:last-child {
+    border-bottom: none;
+}
+
+.cert-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border: 2px solid #000;
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.cert-info {
+    font-size: 11px;
+}
+
+/* ================== PROJECTS ================== */
 .card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  max-width: 500px;
-  margin: 40px auto;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #000;
+    background: #b0b0b0;
+    padding: 10px;
+    margin-top: 12px;
+    box-shadow: 2px 2px 0 #999;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
-}
-
-/* Card Image */
-.card-img {
-  width: 150px;
-  height: 150px;
-
-  object-fit: scale-down;   /* NOT cover */
-  object-position: center;
-
-  display: block;
-  margin: 30px auto 10px;
-
-  border-radius: 50%;
-  border: 3px solid #ddd;
-  background-color: white;
-}
-
-
-
-/* Card Content */
-.card-content {
-  padding: 20px 25px 30px;
-  text-align: center;
-}
 .card h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
-  text-align: center;
+    font-family: 'Minecraftia', 'Press Start 2P', monospace;
+    padding: 4px;
+    border: 2px solid #000;
+    background: #dcdcdc;
 }
 
-.card-content p {
-  font-size: 15px;
-  line-height: 1.6;
-  text-align: center;
+/* ================== DEMO / UPLOAD ================== */
+.demo,
+.lyrics-demo {
+    border: 2px solid #000;
+    background: #b0b0b0;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 0 #999;
 }
 
-.card a {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 18px;
-  background-color: #333;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
+.upload-box {
+    display: block;
+    border: 2px dashed #000;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Minecraftia', 'Press Start 2P', monospace;
+    font-size: 11px;
+    background: #fff;
 }
 
-.card a:hover {
-  background-color: #555;
+.upload-box:hover {
+    background: #dcdcdc;
 }
 
-/* Footer */
-footer {
-  background-color: #505050;
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 14px;
+.file-name {
+    display: block;
+    margin-top: 6px;
+    font-style: italic;
+    color: #333;
 }
 
-footer a {
-  color: #ddd;
-  text-decoration: none;
+button,
+.predict-btn {
+    font-family: 'Minecraftia', 'Press Start 2P', monospace;
+    font-size: 11px;
+    padding: 4px 8px;
+    border: 2px solid #000;
+    background: #b0b0b0;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 #999;
 }
 
-footer a:hover {
-  color: white;
+button:hover,
+.predict-btn:hover {
+    background: #dcdcdc;
+}
+
+/* ================== FOOTER ================== */
+.footer {
+    background: #dcdcdc;
+    border-top: 2px solid #000;
+    padding: 6px;
+    text-align: center;
+    font-family: 'Minecraftia', 'Press Start 2P', monospace;
+    font-size: 10px;
+}
+
+/* ================== TEXTAREA ================== */
+#lyricsInput {
+    width: 100%;
+    height: 150px;
+    resize: none;
+    font-size: 11px;
+    padding: 4px;
+    border: 2px solid #000;
+    background: #fff;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+    .layout {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #000;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .profile-box,
+    .cert-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-box img,
+    .cert-logo {
+        margin: 0 0 8px 0;
+    }
+
+    .upload-box,
+    .predict-btn,
+    button {
+        width: 100%;
+    }
+}
+
+/* Pixelated bounce animation */
+@keyframes pixelBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    /* jump 5px up */
+}
+
+.pixel-icon {
+    image-rendering: pixelated;
+    /* keeps the pixel look */
+    animation: pixelBounce 1s infinite;
+}
+
+/* Optional: slightly randomize multiple icons */
+.pixel-icon:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.pixel-icon:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.pixel-icon:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+@keyframes pixelGlow {
+
+    0%,
+    100% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.5);
+    }
+}
+
+.pixel-glow {
+    animation: pixelGlow 1.2s infinite;
+}
+
+/* Wave + Glow Effect */
+.pixel-wave {
+    display: inline-block;
+    margin-right: 2px;
+    /* space between letters */
+    font-family: 'Minecraftia', 'Press Start 2P', monospace;
+    font-size: 20px;
+    color: #ffffff;
+    animation: wave 1.5s infinite;
+}
+
+/* Wave animation: move letters up/down like sine wave */
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(-4px);
+    }
+
+    20% {
+        transform: translateY(2px);
+    }
+
+    30% {
+        transform: translateY(-2px);
+    }
+
+    40% {
+        transform: translateY(4px);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+
+    60% {
+        transform: translateY(2px);
+    }
+
+    70% {
+        transform: translateY(-2px);
+    }
+
+    80% {
+        transform: translateY(4px);
+    }
+
+    90% {
+        transform: translateY(-2px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.pixel-text {
+    display: inline-block;
+    animation: pixelShake 0.3s infinite;
+}
+
+/* Make profile box fully invisible */
+.profile-box {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    overflow: visible;
+    display: block;
+}
+
+.npc-floor {
+    position: relative;
+    width: 100%;
+    height: 50px;       /* a bit taller than GIF height */
+    margin-top: 0;
+    overflow: visible;  /* allow it to go outside if needed */
+    z-index: 20;
+}
+/* NPC */
+.npc {
+    position: absolute;
+    bottom: -1px;       /* shifts GIF 1px lower so hair is visible */
+    left: 0;
+    width: 30px !important;
+    height: auto !important;
+    margin: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    object-fit: none !important;
+    pointer-events: none;
+    z-index: 30;
+    image-rendering: pixelated;
+    animation: walk 30s ease-in-out infinite;
+    transform-origin: center;
+}
+
+/* Walk animation */
+@keyframes walk {
+    0% {
+        left: 0;
+        transform: scaleX(1);
+    }
+
+    50% {
+        left: calc(100% - 30px);
+        transform: scaleX(1);
+    }
+
+    50.01% {
+        transform: scaleX(-1);
+    }
+
+    100% {
+        left: 0;
+        transform: scaleX(-1);
+    }
 }
